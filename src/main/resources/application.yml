@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:/home/thiago-leite/livrariabanco;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    open-in-view: true
+    hibernate.ddl-auto: create 
+    properties:
+      hibernate.format_sql: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+  main.lazy-initialization: true
+  h2:
+    console:
+      enabled: true
+  web:
+    resources:
+      add-mappings: false
+  servlet:
+    multipart:
+      enabled: false  
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+    disable-swagger-default-url: false  
+    
+logging:
+  level: 
+   root:
+     br: DEBUG
