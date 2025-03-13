@@ -6,9 +6,7 @@ import static org.hamcrest.collection.ArrayMatching.asEqualMatchers;
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
 
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import io.restassured.http.ContentType;
 
@@ -16,7 +14,6 @@ import io.restassured.http.ContentType;
  * Classe de testa de integrção para a classe de delegate {@link IsbnDelegate}.
  * @author Thiago Leite e Fred Viana
  */
-@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class IsbnDelegateTest {
 
