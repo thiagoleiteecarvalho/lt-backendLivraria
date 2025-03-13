@@ -12,6 +12,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
 import br.com.casadocodigo.livrotestes.livraria.domain.entity.Editora;
 
@@ -20,6 +22,7 @@ import br.com.casadocodigo.livrotestes.livraria.domain.entity.Editora;
  * 
  * @author Thiago Leite e Fred Viana
  */
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class CadastroListagemEditoraSeleniumTest {
 
 	/**
@@ -37,9 +40,6 @@ public class CadastroListagemEditoraSeleniumTest {
 	 */
 	@BeforeAll
 	public static void setUp() {
-
-		System.setProperty("webdriver.chrome.driver",
-				"/home/thiago/dev/wokspaceLT/backendLivraria/src/main/resources/selenium-driver/chromedriver");
 
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");		
